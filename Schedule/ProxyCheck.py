@@ -32,10 +32,12 @@ class ProxyCheck(ProxyManager, Thread):
         self.log = LogHandler('proxy_check')
 
     def run(self):
+        #todo 该方法重写threading里面的run方法,实例化该类,然后.start()就按照平时的进程执行
         self.db.changeTable(self.useful_proxy_queue)
         while True:
             proxy_item = self.db.pop()
             while proxy_item:
+                #todo 一直去循环判断数据库里面的useful_proxy_queue
                 proxy = proxy_item.get('proxy')
                 counter = proxy_item.get('value')
                 if validUsefulProxy(proxy):

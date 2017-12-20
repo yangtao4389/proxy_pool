@@ -1,0 +1,22 @@
+# 该文档主要实现了代理ip的爬取
+
+# 按照
+pip instal -r requirements.txt
+
+# 配置config.ini文件
+[DB]
+默认配置了本地的mongodb,关于name是默认的,不用设置
+
+
+[ProxyGetter]
+这个是在ProryGetter下面的getFreeProxy.py实现的爬取代理的方法名,
+1为启用
+
+如果要增加这个方法,参考README.md里面的详细描述
+
+这些方法是被Manager的ProxyManger来调用
+
+[HOST]
+这个为flask启动的运行ip与端口
+
+

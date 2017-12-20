@@ -43,6 +43,7 @@ class ProxyManager(object):
             proxy_set = set()
             # fetch raw proxy
             for proxy in getattr(GetFreeProxy, proxyGetter.strip())():
+                #todo 该方法很巧妙,运用了直接遍历一个yield生成器的方法来得到值
                 if proxy:
                     self.log.info('{func}: fetch proxy {proxy}'.format(func=proxyGetter, proxy=proxy))
                     proxy_set.add(proxy.strip())

@@ -128,7 +128,7 @@ def getHtml():
 　　添加一个新的代理获取方法如下:
 
 * 1、首先在[GetFreeProxy](https://github.com/jhao104/proxy_pool/blob/b9ccdfaada51b57cfb1bbd0c01d4258971bc8352/ProxyGetter/getFreeProxy.py#L32)类中添加你的获取代理的静态方法，
-该方法需要以生成器(yield)形式返回`host:ip`格式的代理，例如:
+该方法需要以生成器(yield)形式返回`ip:port`格式的代理，例如:
 
 ```python
 
@@ -144,7 +144,7 @@ class GetFreeProxy(object):
         proxies = ["139.129.166.68:3128", "139.129.166.61:3128", ...]
         for proxy in proxies:
             yield proxy
-        # 确保每个proxy都是 host:ip正确的格式就行
+        # 确保每个proxy都是 ip:port正确的格式就行
 ```
 
 * 2、添加好方法后，修改Config.ini文件中的`[ProxyGetter]`项：

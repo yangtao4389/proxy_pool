@@ -30,6 +30,7 @@ requests.packages.urllib3.disable_warnings()
 
 
 class GetFreeProxy(object):
+    # todo 所有方法如果需要用,需要去ini注册,另外,每个方法必须返回ip:port形式
     """
     proxy getter
     """

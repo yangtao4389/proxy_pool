@@ -10,7 +10,7 @@
    Change Activity:
                    2016/12/4: 代理定时刷新
                    2017/03/06: 使用LogHandler添加日志
-                   2017/04/26: raw_proxy_queue验证通过但useful_proxy_queue中已经存在的代理不在放入
+                   2017/04/26: raw_proxy_queue验证通过但useful_proxy_queue中已经存在的代理不再放入
 -------------------------------------------------
 """
 
@@ -19,6 +19,7 @@ import time
 import logging
 from threading import Thread
 from apscheduler.schedulers.blocking import BlockingScheduler
+
 
 sys.path.append('../')
 
